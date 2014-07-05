@@ -1,9 +1,28 @@
 <!Doctype html>
 <html>
 <head>
-	<title></title>
+	<title>Image Vertical align Middle</title>
+	<style type="text/css">
+		div.imgMiddle {
+			display: table-cell;
+			vertical-align: middle;
+			background: #333;
+			height: 250px;
+		}
+		div.imgMiddle>img {
+			max-width: 100%;
+		}
+	</style>
 </head>
 <body>
-
+	<div class="imgMiddle">
+		<img src="http://img3.wikia.nocookie.net/__cb20100818222714/spore/images/5/5b/Ubuntu.png">
+	</div>
+	<div class="imgMiddle">
+		<img src="http://img1.wikia.nocookie.net/__cb20100818222723/spore/images/3/30/Debian.png">
+	</div>
+	<div class="imgMiddle">
+		<img src="http://img2.wikia.nocookie.net/__cb20100818222728/spore/images/5/5e/Fedora.png">
+	</div>
 </body>
 </html>
