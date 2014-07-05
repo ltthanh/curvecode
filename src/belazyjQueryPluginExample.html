@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="htf-8">
+    <title>belazyjQueryPluginExample - Curvecode</title>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .container{width: 768px; margin: 0 auto;}
+        .image-element{display: block;width: 100%;}
+        .image-element img {max-width: 100%;}
+        .info{
+          position:fixed;
+          background:green;
+          color:white;
+          width:100%;
+          padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[be]lazy.js</h1>
+        <div class="info">
+            Images loaded: <b id="loaded-images">0</b>
+        </div>
+        <div class="wrapper image-element">
+            <img class="b-lazy" data-src="http://placehold.it/500x250/000000&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/111111&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/222222&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/333333&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/4444444&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/555555&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/666666&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/777777&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />
+            <img class="b-lazy" data-src="http://placehold.it/500x250/888888&text=loaded%20image" src="http://placehold.it/500x250&text=placeholder" />            
+            <img class="b-lazy" data-src="images/image-1.png" src="images/progress.gif" alt="Image-1" />
+            <img class="b-lazy" data-src="images/image-2.png" src="images/progress.gif" alt="Image-2" />
+        </div>        
+    </div>
+    <script src="https:////ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/blazy.min.js"></script>
+    <script type="text/javascript">        
+    var bLazy = new Blazy({
+        success: function(){
+            updateCounter();
+        }
+    });
+
+    // not needed, only here to illustrate amount of loaded images
+    var imageLoaded = 0;
+    var eleCountLoadedImages = document.getElementById('loaded-images');
+
+    function updateCounter() {
+      imageLoaded++;
+      eleCountLoadedImages.innerHTML = imageLoaded;
+    }
+    </script>
+</body>
+</html>

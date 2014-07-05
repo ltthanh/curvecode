@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>angularjs - 01</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <label>Name</label>
+            <input type="text" ng-model="yourname" placeholder="Please enter your name">
+            <hr>
+            <h1>Hello {{yourname}} !</h1>
+            <p>1 + 1 = {{1 + 1}}</p>
+            <div ng-controller="HelloController">
+                <p>{{greeting.text}}, World</p>
+            </div>
+        </div>        
+    </div>
+    <script type="text/javascript">
+    
+    </script>
+</body>
+</html>
